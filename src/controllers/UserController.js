@@ -55,7 +55,7 @@ router.post("/login", async (request, response, next) => {
 
 	console.log(authHeaderData);
 
-	if (authHeaderData == "Example string for header value") {
+	if (authHeaderData != "Example string for header value") {
 		// throw new Error("Not valid login data!");
 		return next(new Error("Not valid login data!"));
 	}
